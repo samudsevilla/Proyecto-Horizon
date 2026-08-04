@@ -1,0 +1,155 @@
+/* ==========================================
+   Estilos para ver-leccion.jsp - Horizon
+   Integrado con el tema principal (style.css)
+   ========================================== */
+
+/* --- Importación / Unificación de Variables de style.css --- */
+:root {
+    --blue-900: #0f172a; /* Texto oscuro */
+    --blue-700: #1d4ed8; /* Azul principal fuerte */
+    --blue-500: #3b82f6; /* Azul botones y acentos */
+    --blue-100: #dbeafe; /* Fondos de tarjetas y hover */
+    --blue-50:  #eff6ff; /* Fondo general del body */
+    --white:    #ffffff;
+    --gray-400: #9ca3af;
+}
+
+body {
+    background-color: var(--blue-50);
+    color: var(--blue-900);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* --- Tarjeta contenedora de la lección --- */
+.content-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    border: 1px solid var(--blue-100);
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* --- Contenedor adaptativo para videos (16:9) --- */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    background-color: #000000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- Sidebar lateral de contenidos --- */
+.sidebar-modules {
+    background-color: var(--white);
+    border-radius: 10px;
+    border: 1px solid var(--blue-100);
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* --- Estilos para el Acordeón de Bootstrap --- */
+.accordion-item {
+    border: 1px solid var(--blue-100);
+    border-radius: 8px !important;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.accordion-button {
+    font-weight: 600;
+    color: var(--blue-900);
+    background-color: var(--white);
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--blue-100);
+    color: var(--blue-700);
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+}
+
+.accordion-body {
+    padding: 0.5rem;
+    background-color: var(--white);
+}
+
+/* --- Items de lección en el índice --- */
+.lesson-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lesson-item {
+    text-decoration: none;
+    color: var(--blue-900);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin-bottom: 2px;
+}
+
+.lesson-item:hover {
+    background-color: var(--blue-50);
+    color: var(--blue-700);
+}
+
+/* --- Lección seleccionada/activa --- */
+.lesson-item.active {
+    background-color: var(--blue-500);
+    color: var(--white) !important;
+    font-weight: 600;
+}
+
+.lesson-item.active i,
+.lesson-item.active span {
+    color: var(--white) !important;
+}
+
+/* --- Formato para el cuerpo de texto de la lección --- */
+.lesson-body {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--blue-900);
+}
+
+
+
+
+/* --- Ajustes para botones inferiores (Navegación y Certificado) --- */
+.d-flex.justify-content-between {
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* Evita desbordamientos si la pantalla es muy pequeña */
+}
+
+/* Efecto hover suave para el botón de éxito/certificado */
+.btn-success {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-success:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.25);
+}

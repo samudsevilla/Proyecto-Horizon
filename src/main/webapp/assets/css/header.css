@@ -1,0 +1,109 @@
+/* --- Variables de Color (Sincronizadas con Dashboard) --- */
+:root {
+    --blue-900: #0f172a; /* Texto oscuro */
+    --blue-700: #1d4ed8; /* Azul principal fuerte */
+    --blue-500: #3b82f6; /* Azul botones y acentos */
+    --blue-100: #dbeafe; /* Fondos de tarjetas y hover */
+    --blue-50:  #eff6ff; /* Fondo general del body */
+    --white:    #ffffff;
+    --gray-400: #9ca3af;
+    --red-500:  #ef4444; /* Rojo para Cerrar Sesión */
+    --red-600:  #dc2626; /* Rojo hover */
+}
+
+/* --- Reseteo Básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* --- Barra de Navegación (Header) --- */
+.navbar {
+    background-color: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+/* --- Sección Izquierda (Perfil + Logo) --- */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Perfil de Usuario y Avatar (Tomado de style.css del Dashboard) */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: var(--blue-500);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.btn-logout {
+    color: var(--red-500) !important; /* !important asegura ganarle a Bootstrap */
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.btn-logout:hover {
+    color: var(--red-600) !important;
+    text-decoration: underline;
+}
+
+/* Logo Horizon */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--blue-900);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--blue-500);
+}
+
+/* --- Navegación Derecha --- */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--blue-900);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover, 
+nav a.active {
+    color: var(--blue-500);
+}
+
+/* --- Adaptabilidad Responsiva --- */
+@media (max-width: 900px) {
+    nav ul {
+        display: none; /* Oculta el menú estándar en móviles */
+    }
+}

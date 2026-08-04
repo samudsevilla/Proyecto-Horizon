@@ -1,0 +1,317 @@
+/* --- Variables de Color --- */
+:root {
+    --blue-900: #0f172a; /* Texto oscuro */
+    --blue-700: #1d4ed8; /* Azul principal fuerte */
+    --blue-500: #3b82f6; /* Azul botones y acentos */
+    --blue-100: #dbeafe; /* Fondos de tarjetas y hover */
+    --blue-50:  #eff6ff; /* Fondo general del body */
+    --white:    #ffffff;
+    --gray-400: #9ca3af;
+}
+
+/* --- Reseteo Básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--blue-50);
+    color: var(--blue-900);
+    line-height: 1.6;
+}
+
+/* --- Barra de Navegación --- */
+.navbar {
+    background-color: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--blue-900);
+}
+
+.logo span {
+    color: var(--blue-500);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--blue-900);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: var(--blue-500);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: var(--blue-500);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* --- Layout Principal --- */
+.dashboard {
+    padding: 2rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- Sección Hero --- */
+.hero-section {
+    background: linear-gradient(135deg, var(--blue-700), var(--blue-500));
+    color: var(--white);
+    padding: 3rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+/* --- Botones --- */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+a.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--white);
+    color: var(--blue-700);
+}
+
+.btn-primary:hover {
+    background-color: var(--blue-100);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--blue-500);
+    color: var(--blue-500);
+}
+
+.btn-outline:hover {
+    background-color: var(--blue-500);
+    color: var(--white);
+}
+
+.btn-disabled {
+    background-color: var(--gray-400);
+    color: var(--white);
+    cursor: not-allowed;
+}
+
+/* --- Grid de Contenido --- */
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--blue-900);
+}
+
+/* --- Tarjetas de Cursos (Adaptadas para enlaces <a>) --- */
+a.course-card, .course-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--blue-500);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+}
+
+a.course-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border-left-color: var(--blue-700);
+}
+
+a.course-card:hover .course-info h3 {
+    color: var(--blue-500);
+}
+
+.course-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+    color: var(--blue-900);
+    transition: color 0.2s ease;
+}
+
+.course-info p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Barras de Progreso --- */
+.progress-container {
+    width: 100%;
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: var(--blue-100);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--blue-500);
+    border-radius: 4px;
+}
+
+.progress-text {
+    font-size: 0.85rem;
+    color: var(--blue-700);
+    font-weight: 600;
+}
+
+/* --- Tarjetas de Certificación --- */
+.cert-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.cert-card.success {
+    border: 2px dashed var(--blue-500);
+    background-color: var(--blue-50);
+}
+
+.cert-card.pending {
+    border: 1px solid var(--gray-400);
+    opacity: 0.8;
+}
+
+.cert-icon {
+    font-size: 2rem;
+}
+
+.cert-details h3 {
+    font-size: 1rem;
+}
+
+.cert-details p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.date {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--blue-500);
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* --- Autenticación y Perfil del Usuario --- */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-link {
+    color: #4b5563;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.btn-primary-sm {
+    background-color: #2563eb;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-logout {
+    color: #ef4444;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.btn-logout:hover {
+    color: #dc2626;
+    text-decoration: underline;
+}
+
+/* --- Responsividad --- */
+@media (max-width: 900px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        display: none;
+    }
+}
