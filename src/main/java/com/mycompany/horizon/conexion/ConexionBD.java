@@ -8,7 +8,7 @@ public class ConexionBD {
     
     // Parámetros de conexión a MySQL en XAMPP
     // Si tu puerto MySQL es el estándar (3306), cámbialo aquí. Si usas 3307, déjalo así.
-    private static final String URL = "jdbc:mysql://localhost:3306/horizon_db?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8";
+    private static final String URL = "jdbc:mysql://localhost:3307/horizon_db?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8";
     private static final String USER = "root";
     private static final String PASSWORD = ""; // Coloca tu clave de MySQL si la cambiaste en XAMPP
 
