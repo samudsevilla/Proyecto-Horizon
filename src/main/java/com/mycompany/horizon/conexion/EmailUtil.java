@@ -13,7 +13,7 @@ public class EmailUtil {
     private static final String SMTP_HOST = "smtp.gmail.com";
     private static final String SMTP_PORT = "587";
     private static final String SMTP_USER = "proyectohorizon47@gmail.com";
-    private static final String SMTP_PASS = "saia2308";
+    private static final String SMTP_PASS = "hijljrmhjacvldjs";
 
     public static boolean enviarCodigoVerificacion(String destinoEmail, String codigo) {
         String asunto = "Horizon - Verifica tu cuenta";
@@ -64,7 +64,7 @@ public class EmailUtil {
     }
 
     private static void guardarCodigoLocalmente(String email, String codigo) {
-        String path = "C:\\Users\\daniel\\Desktop\\proyecto horizon\\verificaciones_desarrollo.txt";
+        String path = "verificaciones_desarrollo.txt"; // Se guardará en la carpeta del proyecto en NetBeans
         try (FileWriter writer = new FileWriter(path, true)) {
             writer.write("[" + new java.util.Date() + "] Correo: " + email + " | Código: " + codigo + "\n");
         } catch (IOException e) {

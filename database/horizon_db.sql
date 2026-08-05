@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 05-08-2026 a las 01:43:08
+-- Tiempo de generación: 05-08-2026 a las 15:26:35
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -306,7 +306,8 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`id_usuario`, `nombre`, `email`, `password`, `rol`, `fecha_registro`, `verificado`, `codigo_verificacion`) VALUES
 (1, 'Samuel Sevilla', 'sevillasamuel56@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'ESTUDIANTE', '2026-07-23 22:39:21', 1, NULL),
 (2, 'daniel colmenarez', 'Danielalejandrocolmenarez2308@gmail.com', 'e4ce92c11ef6b1b69a35e5a008f737fc8b234c1b0633b08c935739ffcf8e9642', 'ESTUDIANTE', '2026-08-04 13:07:38', 1, NULL),
-(3, 'adsasdads', 'brakysan@gmail.com', 'bd3dae5fb91f88a4f0978222dfd58f59a124257cb081486387cbae9df11fb879', 'ESTUDIANTE', '2026-08-04 15:12:57', 1, NULL);
+(3, 'adsasdads', 'brakysan@gmail.com', 'bd3dae5fb91f88a4f0978222dfd58f59a124257cb081486387cbae9df11fb879', 'ESTUDIANTE', '2026-08-04 15:12:57', 1, NULL),
+(6, 'Sarai Perez', 'sevillasamuel.31@gmail.com', '5b9869abafee11c889e73129428181f8300f93391afe9499218f046f06d3b33d', 'ESTUDIANTE', '2026-08-05 00:35:06', 1, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -449,7 +450,7 @@ ALTER TABLE `resultados_evaluacion`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas
